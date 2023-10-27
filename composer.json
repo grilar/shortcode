@@ -1,0 +1,24 @@
+{
+    "name": "grilar/shortcode",
+    "description": "Shortcode package",
+    "type": "package",
+	"license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Grilar\\Shortcode\\": "src"
+        }
+    },
+    "require": {
+        "grilar/platform": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grilar\\Shortcode\\Providers\\ShortcodeServiceProvider"
+            ],
+            "aliases": {
+                "Shortcode": "Grilar\\Shortcode\\Facades\\Shortcode"
+            }
+        }
+    }
+}

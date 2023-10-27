@@ -1,0 +1,26 @@
+<?php
+
+namespace Grilar\Shortcode\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+/**
+ * @method static \Grilar\Shortcode\Shortcode register(string $key, string|null $name, string|null $description = null, $callback = null, string $previewImage = '')
+ * @method static \Grilar\Shortcode\Shortcode enable()
+ * @method static \Grilar\Shortcode\Shortcode disable()
+ * @method static \Illuminate\Support\HtmlString compile(string $value, bool $force = false)
+ * @method static string|null strip(string|null $value)
+ * @method static array getAll()
+ * @method static void setAdminConfig(string $key, callable|array|string|null $html)
+ * @method static string generateShortcode(string $name, array $attributes = [])
+ * @method static \Grilar\Shortcode\Compilers\ShortcodeCompiler getCompiler()
+ *
+ * @see \Grilar\Shortcode\Shortcode
+ */
+class Shortcode extends Facade
+{
+    protected static function getFacadeAccessor(): string
+    {
+        return 'shortcode';
+    }
+}
